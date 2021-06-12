@@ -6,7 +6,7 @@ import { StylesProvider, jssPreset, } from '@material-ui/core/styles';
 import { ThemeProvider } from '@material-ui/core/styles';
 import customTheme from './assets/customTheme';
 import './assets/webFonts/css/fontiran.css'
-
+import "./app.css"
 // Configure JSS
 const jss = create({ plugins: [...jssPreset().plugins, rtl()] });
 
@@ -15,9 +15,7 @@ function App() {
     <div >
       <ThemeProvider theme={customTheme}>
         <StylesProvider jss={jss}>
-          <div >
             <HayperMarket />
-          </div>
         </StylesProvider>
       </ThemeProvider>
     </div>

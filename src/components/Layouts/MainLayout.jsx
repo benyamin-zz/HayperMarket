@@ -1,13 +1,14 @@
 import React from 'react'
-import Header from '../Common/Header'
-import Footer from '../Common/Footer'
+import Header from '../Common/Header/Header'
+import Footer from '../Common/Footer/Footer'
+
 
 function mainLayout() {
     return (
-        <div>
+        <>
               <Header />
               <Footer />
-        </div>
+        </>
     )
 }
 

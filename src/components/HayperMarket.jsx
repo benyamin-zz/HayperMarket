@@ -1,12 +1,12 @@
-import React from 'react'
-import MainLayout from "./Layouts/MainLayout"
+import React from "react";
+import MainLayout from "./Layouts/MainLayout";
 
 function hayperMarket() {
-    return (
-        <div>
-                <MainLayout />
-        </div>
-    )
+  return (
+    <>
+      <MainLayout />
+    </>
+  );
 }
 
-export default hayperMarket
+export default hayperMarket;

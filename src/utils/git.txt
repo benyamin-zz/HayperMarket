@@ -1,7 +1,7 @@
-echo "# HayperMarket" >> README.md
+echo "# Hayper_Market" >> README.md
 git init
 git add README.md
 git commit -m "first commit"
 git branch -M main
-git remote add origin https://github.com/benyamin-zz/HayperMarket.git
+git remote add origin https://github.com/benyamin-zz/Hayper_Market.git
 git push -u origin main

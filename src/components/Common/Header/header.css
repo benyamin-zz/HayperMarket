@@ -1,0 +1,114 @@
+.header {
+  background-color: #fff;
+  display: inline-block;
+  width: 100%;
+}
+.blog-link {
+  margin-bottom: 13px;
+}
+.blog-link .brand{
+  float: right;
+}
+.blog-link a {
+  display: inline-flex;
+  align-items: center;
+  font-size: 12px;
+  font-weight: bold;
+  height: 36px;
+  width: 64px;
+  justify-content: center;
+}
+
+.blog-link a:nth-child(2) {
+  background-color: #fbc5ce;
+}
+.blog-link a:nth-child(2):hover {
+  background-color: red;
+  color: #fff;
+}
+.blog-link .Phone {
+  font-size: 12px;
+  display: inline-flex;
+  align-items: center;
+  font-weight: bold;
+  margin-right: 15px;
+}
+.blog-link .IconPhone {
+  font-size: 20px;
+  margin-right: 5px;
+}
+.MenuTop-brand{
+  margin-bottom: 30px;
+}
+.MenuTop-brand .brand {
+  height: 48px;
+  display: inline-block;
+  overflow: hidden;
+}
+.MenuTop-brand .brand img {
+  height: 100%;
+}
+.searchBox {
+  border-radius: 31px !important;
+  overflow: hidden;
+  padding-right: 16px;
+  padding-left: 4px;
+  display: flex;
+  height: 48px;
+  align-self: center;
+
+}
+.searchBox .iconSearch {
+  display: flex;
+  align-self: center;
+  margin-left: 8px;
+  color: #a09999;
+  font-size: 19px;
+}
+.searchBox .inputSearch {
+  flex: 1;
+  font-size: 14px !important;
+  font-weight: bold;
+
+}
+.searchBox .btn-search {
+  width: 101px;
+  height: 42px;
+  font-size: 14px;
+  border: none;
+  border-radius: 22px;
+  align-self: center;
+  margin-right: 5px;
+  background-image: linear-gradient( 90deg, rgba(217, 217, 217, 1) 0%, rgba(168, 168, 168, 1) 90% );
+
+}
+.searchBox  .activeBtn{
+  background-image:linear-gradient(45deg,rgba(251,111,75,1) 0%,rgba(251,75,99,1) 90%);
+}
+.cardWrapper{
+  display: inline-block;
+  margin-left: 20px;
+}
+.cardWrapper button{
+  background-color: rgba(22, 22, 22, 0.08);
+  font-size: 14px;
+  width: 134px;
+  padding: 11px;
+  border-radius: 27px;
+}
+.card{
+  width: 50px;
+    height: 50px;
+    border-radius: 50% !important;
+    background-color: #dbf2f2 !important;
+}
+.card .fa-shopping-cart{
+  font-size: 20px;
+    color: #12b9b9;
+}
+@media screen and (max-width: 990px) {
+  .SearchGrid {
+  order: 3;
+  margin-top: 10px !important;
+  }
+}

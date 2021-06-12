@@ -1,0 +1,18 @@
+.offcanvas-Cart h3{
+    margin: 0;
+    color: #f01436;
+    font-size: 20px;
+    font-weight: 500;
+}
+.offcanvas-header {
+    padding: 16px;
+}
+.offcanvasBox{
+    display: flex;
+}
+.offcanvas-header_price{
+    margin-right: auto;
+    font-weight: normal;
+    font-size: 1.25rem;
+    color: #02a0a4;
+}
