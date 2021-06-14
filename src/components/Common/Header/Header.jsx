@@ -35,9 +35,46 @@ const data = {
             image1: null,
             image2: null,
             description: "",
-            subCategory: null,
+            subCategory: [
+              {
+                title: "تست 1",
+                image1: null,
+                image2: null,
+                description: "",
+                subCategory: [
+                  {
+                    title: "تست 2",
+                    image1: null,
+                    image2: null,
+                    description: "",
+                    subCategory: [
+                      {
+                        title: "تست 3",
+                        image1: null,
+                        image2: null,
+                        description: "",
+                        subCategory: [
+                          {
+                            title: "تست 4",
+                            image1: null,
+                            image2: null,
+                            description: "",
+                            subCategory: null,
+                            id: "1decc85e-6375-46c6-0eaa-08d899f05edd",
+                          },
+                        ],
+                        id: "1decc85e-6375-46c6-0eaa-08d899f05edd",
+                      },
+                    ],
+                    id: "1decc85e-6375-46c6-0eaa-08d899f05edd",
+                  },
+                ],
+                id: "1decc85e-6375-46c6-0eaa-08d899f05edd",
+              },
+            ],
             id: "703644d3-7516-4e5c-0ea9-08d899f05edd",
           },
+
           {
             title: "آجیل و خشکبار",
             image1: null,
@@ -207,7 +244,30 @@ const data = {
             image1: null,
             image2: null,
             description: "",
-            subCategory: null,
+            subCategory: [
+              {
+                title: "لوازم التحریر 1 ",
+                image1: null,
+                image2: null,
+                description: "",
+                subCategory: null,
+              },
+              {
+                title: "لوازم التحریر 5 ",
+                image1: null,
+                image2: null,
+                description: "",
+                subCategory: [
+                  {
+                    title: "لوازم بازی و سرگرمی",
+                    image1: null,
+                    image2: null,
+                    description: "",
+                    subCategory: null,
+                  },
+                ],
+              },
+            ],
             id: "b188c0f2-edcb-4b9a-0eba-08d899f05edd",
           },
           {
@@ -215,7 +275,25 @@ const data = {
             image1: null,
             image2: null,
             description: "",
-            subCategory: null,
+            subCategory: [
+              {
+                title: "لوازم بازی و سرگرمی 1",
+                image1: null,
+                image2: null,
+                description: "",
+                subCategory: [
+                  {
+                    title: "لوازم بازی و سرگرمی 2",
+                    image1: null,
+                    image2: null,
+                    description: "",
+                    subCategory: null,
+                    id: "b188c0f2-edcb-4b9a-0eba-08d899f05edd",
+                  },
+                ],
+                id: "b188c0f2-edcb-4b9a-0eba-08d899f05edd",
+              },
+            ],
             id: "d2ddc070-1e57-4820-0ebb-08d899f05edd",
           },
         ],
@@ -446,6 +524,19 @@ const data = {
 
 function Header() {
   const [activeBtn, setActiveBtn] = useState(false);
+  const [state, setState] = React.useState({ right: false });
+
+  const toggleDrawer = (anchor, open) => (event) => {
+    if (
+      event &&
+      event.type === "keydown" &&
+      (event.key === "Tab" || event.key === "Shift")
+    ) {
+      return;
+    }
+
+    setState({ ...state, [anchor]: open });
+  };
 
   return (
     <header className="header">
@@ -469,15 +560,14 @@ function Header() {
         <div className="MenuTop-brand">
           <Grid container>
             <Grid item md={1}>
-                <Hidden only={['xs', 'sm']}>
+              <Hidden only={["xs", "sm"]}>
                 <a href="#" className="brand">
-                     <img src={barand} alt="#" />
+                  <img src={barand} alt="#" />
                 </a>
-                </Hidden>
-             
+              </Hidden>
             </Grid>
-            <Grid className="SearchGrid" item md={5} sm={11} >
-              <Paper className="searchBox" variant="outlined" >
+            <Grid className="SearchGrid" item md={5} sm={11}>
+              <Paper className="searchBox" variant="outlined">
                 <Icon className="iconSearch fas fa-search" />
                 <InputBase
                   className="inputSearch "
@@ -502,7 +592,17 @@ function Header() {
               <div className="cardWrapper">
                 <Button variant="contained">ورود / ثبت نام</Button>
               </div>
-              <Drawers  />
+              <IconButton
+                aria-label="cart"
+                className="card"
+                onClick={toggleDrawer("right", true)}
+              >
+                <StyledBadge badgeContent={4} color="secondary">
+                  <Icon className="fas fa-shopping-cart" />
+                </StyledBadge>
+              </IconButton>
+
+              <Drawers toggleDrawer={toggleDrawer} state={state} />
             </Grid>
           </Grid>
         </div>
@@ -515,12 +615,7 @@ function Header() {
             subCategory={cat.subCategory}
           />
         ))}
-
-
-
-        
       </Container>
-      
     </header>
   );
 }

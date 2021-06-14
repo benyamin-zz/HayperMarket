@@ -11,12 +11,28 @@ import {
 import "@szhsin/react-menu/dist/index.css";
 import Button from "@material-ui/core/Button";
 
-export const NestedMenu = ({title,subCategory}) => { 
+export const NestedMenu = ({ title, subCategory }) => {
   const [isOpen, setOpen] = useState(false);
   const [ActiveButton, SetActiveButton] = useState(false);
   const ref = useRef(null);
+
+  const renderMenu = (subCategory) => {
+     return subCategory.map((subItem, index) => {
+      return subItem.subCategory === null ? (
+        <MenuItem key={index}>{subItem.title}</MenuItem> //MenuItem === li    SubMenu == ul
+
+      ) : (
+        <SubMenu key={index} direction="left" label={`${subItem.title}`} >
+          {renderMenu(subItem.subCategory)}
+        </SubMenu> // SubMenu == ul
+      )
+ 
+         
+      });
+  };
+
   return (
-    <div className="wrapper" onMouseLeave={()=>setOpen(false)} >
+    <div className="wrapper" onMouseLeave={() => setOpen(false)}>
       {/* <Dropdown  title="مواد غذایی" buttonClassName="btn-Menu">
         <Dropdown.Item className="MenuItem" >آجیل و خشکبار</Dropdown.Item>
         <Dropdown.Item>
@@ -48,9 +64,16 @@ export const NestedMenu = ({title,subCategory}) => {
             </SubMenu>
             <MenuItem>Save</MenuItem>
         </Menu> */}
-      <Button className={ActiveButton ? "ButtonMenuActived btnMenu": "btnMenu"} ref={ref} onMouseOver={() => {setOpen(true); SetActiveButton(true)}}
-        onMouseOut={()=>{SetActiveButton(false);  }}      
-      
+      <Button
+        className={ActiveButton ? "ButtonMenuActived btnMenu" : "btnMenu"}
+        ref={ref}
+        onMouseOver={() => {
+          setOpen(true);
+          SetActiveButton(true);
+        }}
+        onMouseOut={() => {
+          SetActiveButton(false);
+        }}
       >
         {title}
       </Button>
@@ -60,18 +83,19 @@ export const NestedMenu = ({title,subCategory}) => {
         isOpen={isOpen}
         align="end"
         onClose={() => setOpen(false)}
-        onMouseOver={() => {SetActiveButton(true)}}
-        onMouseOut={()=>{SetActiveButton(false);}}
+        onMouseOver={() => {
+          SetActiveButton(true);
+        }}
+        onMouseOut={() => {
+          SetActiveButton(false);
+        }}
         onMouseLeave={() => setOpen(false)}
-
       >
-        {subCategory.map( (subItem,index) => (
-           <MenuItem key={index}>{subItem.title}</MenuItem>
-        )) }
-       
-       
+        {
+          renderMenu(subCategory)
+        }
+
         {/* <SubMenu label="چاشنی و ادویه جات"  direction="left">
-          <MenuItem >index.html</MenuItem>
           <MenuItem>example.js</MenuItem>
             <SubMenu label="Styles" direction="left" >
               <MenuItem>about.css</MenuItem>
@@ -80,7 +104,6 @@ export const NestedMenu = ({title,subCategory}) => {
             </SubMenu>
         </SubMenu> */}
       </ControlledMenu>
-      
     </div>
   );
 };

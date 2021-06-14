@@ -1,0 +1,93 @@
+
+.Item-content {
+  height: 466px;
+  padding: 16px;
+  overflow-y: auto;
+}
+.CartItem {
+  display: flex;
+  margin-bottom: 10px;
+  padding: 16px;
+}
+.CartItem .details {
+  display: flex;
+  flex-direction: column;
+}
+.CartItem .content {
+  flex: 1 0 auto;
+}
+.CartItem .cover {
+  width: 90px;
+  height: 90px;
+  display: flex;
+  align-self: center;
+}
+
+.offcanvas-product-box_price{
+    letter-spacing: .5px;
+    color: #bdbdbd;
+    text-decoration: line-through;
+    font-size: .875rem;
+    line-height: 1.2;
+    font-weight: normal;
+}
+.offcanvas-product-box_price-value{
+    color: #02a0a4;
+    letter-spacing: 0;
+    font-weight: normal;
+    font-size: 1.25rem;
+    line-height: 1.2;
+    text-align: right;
+    margin-top: auto;
+}
+.touchspin-btn{
+    display: inline-block;
+    border: 1px solid #CCC;
+    border-radius: 5px;
+    width: 90px;
+    height: 30px;
+    overflow: hidden;
+}
+.CardBtn{
+    display: flex !important;
+    align-items: flex-end;
+    height: 90px;
+}
+.CardBtn .plus{
+    width: 27px;
+    min-width: 5px;
+    height: 100%;
+}
+.CardBtn .mines{
+    width: 27px;
+    min-width: 5px;
+    height: 100%;
+    float: left;
+}
+
+.countItem{
+    width: 36px;
+    display: inline-block;
+    text-align: center;
+}
+.Item-content::-webkit-scrollbar-track {
+    box-shadow: none;
+    border-radius: 10px;
+}
+.Item-content::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+
+   
+  /* Handle */
+  .Item-content::-webkit-scrollbar-thumb {
+    background: #00000066;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out ;
+  }
+  
+  /* Handle on hover */
+  .Item-content::-webkit-scrollbar-thumb:hover {
+    background: #0000008c;
+  }

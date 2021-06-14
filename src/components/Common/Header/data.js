@@ -12,7 +12,24 @@
                         "image1": null,
                         "image2": null,
                         "description": "",
-                        "subCategory": null,
+                        "subCategory": [
+                            {
+                                "title": "آجیل و خشکبار",
+                                "image1": null,
+                                "image2": null,
+                                "description": "",
+                                "subCategory": null,
+                                "id": "1decc85e-6375-46c6-0eaa-08d899f05edd"
+                            },
+                            {
+                                "title": "آجیل و خشکبار",
+                                "image1": null,
+                                "image2": null,
+                                "description": "",
+                                "subCategory": null,
+                                "id": "1decc85e-6375-46c6-0eaa-08d899f05edd"
+                            }
+                        ],
                         "id": "703644d3-7516-4e5c-0ea9-08d899f05edd"
                     },
                     {
