@@ -1,0 +1,27 @@
+
+.cover{
+    background-image: url(https://okala.com/assets/img/overlay-bg.jpg?v=Q5lQIAowiH8LU602M8gLdTd_OsR3rVT0HT1aFl6V6no);
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 397px;
+    margin-bottom: 20px;
+}
+.coverBody{
+    height: 100% ;
+    display: flex !important;
+    align-items: center;
+    color: #fff;
+}
+.coverBody h2{
+    font-weight: 500;
+    font-size: 2rem;
+}
+.coverBody p{
+    font-weight: 500;
+}
+
+
+.m8{
+    margin: .5rem !important;
+}

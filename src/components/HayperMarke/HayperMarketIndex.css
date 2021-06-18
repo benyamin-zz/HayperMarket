@@ -1,0 +1,71 @@
+.cardHeader{
+    background-color: #f01436;
+    color: #FFF;
+    text-align: center;
+    width: 100%;    
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease-in-out;
+    font-size: 1rem;
+    font-weight: 500;
+
+}
+.cardHeader:hover{
+    background-color: #d30d2b;
+}
+.cardCarousel{
+    height: 508px;
+    overflow: hidden;
+    border-radius: 10px;
+    border-radius: 10px !important;
+
+}
+.py-24{
+    padding-top: 24px;
+    margin-bottom: 1.25rem
+}
+.slider{
+    height: 350px;
+    overflow: hidden;
+    margin-bottom: 16px;
+}
+.card-body{
+    height: 101px;
+    overflow: hidden;
+    padding: 1.25rem;
+
+    
+}
+.card-body > div{
+    height: 100%;
+}
+.strc-CardBody{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    justify-content: center;
+
+}
+.card-body img {
+    height: 60px;
+    width: 60px;
+    margin-left: 18px;
+}
+.card-body p {
+    font-size: 1rem;
+    font-weight: 500;
+}
+.CardSlider{
+    height: 506px;
+}
+.brand{
+    height: 208px;
+}
+.brand .slick-slider{
+    height: 71% !important;
+}
+.brand .slick-list{
+    height: 100% !important;
+}

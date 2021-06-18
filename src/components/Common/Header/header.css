@@ -106,6 +106,12 @@
   font-size: 20px;
     color: #12b9b9;
 }
+.MenuFix{
+  /* position: sticky;
+    top: 0;
+    z-index: 1020; */
+
+}
 @media screen and (max-width: 990px) {
   .SearchGrid {
   order: 3;

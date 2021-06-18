@@ -1,0 +1,74 @@
+Footer{
+    background: #e6e6e6;
+    padding-top: 60px;
+    height: 440px;
+}
+
+Footer h3{
+    color: #02a0a4;
+    margin: 0;
+    margin-bottom: 25px;
+}
+Footer ul{
+    display: inline-grid;
+    list-style: none;
+    padding-right: 0;
+    padding-left: 29px;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+Footer ul li{
+    line-height: 35px;
+    font-weight: 400;
+    color: #7b7777;
+}
+Footer .social-link{
+     border-radius: 10px;
+    box-shadow: 0 2px 24px 0 rgb(22 22 22 / 2%);
+    padding: 1.5rem !important;
+    background-color: #FFF;
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    height: 38px;
+}
+.vertical-divider {
+    content: '';
+    display: inline-block;
+    width: 5px;
+    height: 48px;
+    border-radius: 2px;
+    background-image: linear-gradient(
+161deg
+, #ff7070 -4%, #f01436 104%);
+    margin-left: 32px;
+}
+Footer .social-link a{
+    margin-left: 20px;
+}
+Footer .social-link i{
+    font-size: 34px;
+    color: #212121;
+}
+Footer .footer-certificate{
+    height: 90px;
+    width: 90px;
+    border-radius: 10px;
+    box-shadow: 0 2px 24px 0 rgb(22 22 22 / 2%);
+    background-color: rgba(219,219,219,0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.footer-certificate img {
+    object-fit: contain;
+    width: 70px;
+    height: 70px;    
+}
+.rull-site{
+    text-align: center;
+    background-color: #d9d9d9;
+    margin-top: 60px;
+    padding: 10px;
+}

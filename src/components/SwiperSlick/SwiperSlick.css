@@ -1,0 +1,32 @@
+.SwiperSlick{
+    height: 100%;
+}
+.SwiperSlick .slick-slider{
+    height: 100%;
+}
+.SwiperSlick .slick-list{
+    height: 100%;
+}
+
+.SwiperSlick .slick-track{
+    height: 100%;
+}
+
+.SwiperSlick .slick-slide{
+    height: 100%;
+}
+
+.SwiperSlick div{
+    height: 100%;
+}
+
+.SwiperSlick img{
+    height: 100%;
+    width: 100%;
+}
+.slick-dots{
+    bottom: 5px !important;
+}
+.SwiperSlick .slick-dots li.slick-active button:before {
+    color: red;
+}

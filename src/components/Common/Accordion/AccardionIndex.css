@@ -1,0 +1,22 @@
+.Accordion .MuiAccordionSummary-content {
+  justify-content: center !important;
+}
+.Accordion .MuiAccordionSummary-content {
+  flex-grow: 0;
+}
+.Accordion {
+  width: 100%;
+  margin-bottom: 0.25rem !important;
+}
+.Accordion > div {
+  background: #e6e6e6;
+}
+
+.Accordion h3 {
+  line-height: 28px;
+  text-align: justify;
+}
+.Accordion p {
+  line-height: 28px;
+  text-align: justify;
+}

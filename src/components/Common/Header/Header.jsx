@@ -541,6 +541,7 @@ function Header() {
   return (
     <header className="header">
       <Container maxWidth="xl">
+        <div className="MenuFix">
         <div className="blog-link">
           <Hidden only={["md", "lg"]}>
             <a href="#" className="brand">
@@ -605,6 +606,7 @@ function Header() {
               <Drawers toggleDrawer={toggleDrawer} state={state} />
             </Grid>
           </Grid>
+        </div>
         </div>
 
         {/* <NestedMenu /> */}
